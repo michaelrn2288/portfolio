@@ -4,17 +4,38 @@
     box-sizing: border-box;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 body {
     font-family: sans-serif;
 }
 
-
+.main-header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: beige;
+}
 
 .nav-bar ul {
     display: flex;
-    justify-content: center;
     list-style: none;
     gap: 30px;
+    background-color: lightcyan;
+}
+
+main {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    background-color:aquamarine;
+    height: 300px;
 }
 
 .main-footer {
