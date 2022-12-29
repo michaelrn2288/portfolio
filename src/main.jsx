@@ -5,7 +5,7 @@ import Contact from './Components/Contact'
 import Footer from './Components/Footer'
 import Header from './Components/Header'
 import Home from './Components/Home'
-import NavBar from './Components/NavBar'
+import MouseSparks from './Components/MouseSparks'
 import NotFound from './Components/NotFound'
 import Projects from './Components/Projects'
 import './styles/global.css'
@@ -14,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Header />
+      <MouseSparks />
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
