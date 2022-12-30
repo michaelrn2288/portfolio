@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import michaelAvatar from '../../assets/eu.jpg'
+import Footer from '../Footer'
 
 const StyledSection = styled.section`
 display: flex;
@@ -31,6 +32,7 @@ export default function Home() {
                     alt='Michael avatar'
                 />
             </StyledSection>
+                <Footer />
         </div>
     )
 }

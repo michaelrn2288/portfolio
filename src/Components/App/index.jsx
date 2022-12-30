@@ -1,5 +1,8 @@
 import { useState } from "react";
+import Footer from "../Footer";
+import Header from "../Header";
 import MouseSparks from "../MouseSparks";
+import Router from "../Router";
 import ToggleButton from "../ToggleButton";
 
 export default function App() {
@@ -7,6 +10,7 @@ export default function App() {
 
     return (
         <div>
+            <Header />
             <MouseSparks
                 areSparksOn={areSparksOn}
             />
@@ -16,6 +20,9 @@ export default function App() {
                 textWhenOn={'desligar faíscas'}
                 textWhenOff={'ligar faíscas'}
             />
+            <main>
+                <Router />
+            </main>
         </div>
     )
 }

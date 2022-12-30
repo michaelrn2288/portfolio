@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 import Spark from './Components/Spark'
 
 export default function MouseSparks(props) {
+
+  const StyledSparks = styled.div`
+  position: absolute;
+  `
 
   const [mousePosition, setMousePosition] = useState({
     x: '',
@@ -95,7 +100,7 @@ export default function MouseSparks(props) {
 
   return (
 
-    <div className='mouse-sparks'>
+    <div>
       {
         props.areSparksOn ?
           mouseMoved && !mouseOutOfWindow && sparkElements

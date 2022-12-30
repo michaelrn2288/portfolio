@@ -14,7 +14,7 @@ opacity: 0;
 `
 
 const StyledSpark = styled.div`
-position: absolute;
+position: fixed;
 width: 11px;
 height: 11px;
 border-radius: 50%;
