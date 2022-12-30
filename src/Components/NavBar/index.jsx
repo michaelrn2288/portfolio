@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-export default function NavBar(props) {
+const StyledUl = styled.ul`
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    background-color: lightcyan;
+`
+
+export default function NavBar() {
     return (
-        <nav className={`${props.placement} nav-bar`}>
-            <ul>
+        <nav>
+            <StyledUl>
                 <li>
                     <Link to='/'>HOME</Link>
                 </li>
@@ -13,7 +21,7 @@ export default function NavBar(props) {
                 <li>
                     <Link to='/contact'>CONTATO</Link>
                 </li>
-            </ul>
+            </StyledUl>
         </nav>
     )
 }

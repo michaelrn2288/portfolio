@@ -1,9 +1,16 @@
 import { useState } from "react";
+import styled from "styled-components";
 import Footer from "../Footer";
 import Header from "../Header";
 import MouseSparks from "../MouseSparks";
 import Router from "../Router";
 import ToggleButton from "../ToggleButton";
+
+const StyledMain = styled.main`
+    display: flex;
+    justify-content: center;
+    background-color:aquamarine;
+`
 
 export default function App() {
     const [areSparksOn, setAreSparksOn] = useState(true)
@@ -20,9 +27,9 @@ export default function App() {
                 textWhenOn={'desligar faíscas'}
                 textWhenOff={'ligar faíscas'}
             />
-            <main>
+            <StyledMain>
                 <Router />
-            </main>
+            </StyledMain>
         </div>
     )
 }
