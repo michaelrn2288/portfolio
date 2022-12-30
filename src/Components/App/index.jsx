@@ -11,8 +11,10 @@ export default function App() {
                 areSparksOn={areSparksOn}
             />
             <ToggleButton
-            isSwitchOn={areSparksOn}
+                isSwitchOn={areSparksOn}
                 toggleState={setAreSparksOn}
+                textWhenOn={'desligar faíscas'}
+                textWhenOff={'ligar faíscas'}
             />
         </div>
     )
