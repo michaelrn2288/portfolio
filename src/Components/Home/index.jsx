@@ -3,20 +3,20 @@ import michaelAvatar from '../../assets/eu.jpg'
 import Footer from '../Footer'
 
 const StyledSection = styled.section`
-display: flex;
-flex-direction: column;
-align-items: center;
-background:blue;
-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:blue;
+    height: 100vh;
 `
 
 const StyledAvatar = styled.img`
-width: 140px;
-border-radius: 50%;
+    width: 140px;
+    border-radius: 50%;
 `
 
 const StyledP = styled.p`
-margin: 20px auto;
+    margin: 20px auto;
 `
 
 export default function Home() {

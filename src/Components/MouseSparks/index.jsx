@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Spark from './Components/Spark'
 
-export default function MouseSparks(props) {
 
-  const StyledSparks = styled.div`
-  position: absolute;
+const StyledSparks = styled.div`
+    position: absolute;
   `
 
+export default function MouseSparks(props) {
   const [mousePosition, setMousePosition] = useState({
     x: '',
     y: ''
