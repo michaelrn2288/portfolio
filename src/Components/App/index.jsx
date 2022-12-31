@@ -15,9 +15,11 @@ const StyledMain = styled.main`
 export default function App() {
     const [areSparksOn, setAreSparksOn] = useState(true)
 
+    const headerHeight = '10'//vh
+
     return (
         <div>
-            <Header />
+            <Header headerHeight={headerHeight} />
             <MouseSparks
                 areSparksOn={areSparksOn}
             />
@@ -28,7 +30,7 @@ export default function App() {
                 textWhenOff={'ligar faíscas'}
             />
             <StyledMain>
-                <Router />
+                <Router headerHeight={headerHeight} />
             </StyledMain>
         </div>
     )
