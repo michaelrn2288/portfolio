@@ -1,13 +1,51 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import michaelAvatar from '../../assets/eu.jpg'
 import Footer from '../Footer'
+
+const typeText = keyframes`
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+`
+
+const blickCaret = keyframes`
+    0%, 40%, 80% {
+        border-color: transparent
+    }
+
+    20%, 60%, 100% {
+        border-color: black
+    }
+`
+
+const revealAvatar = keyframes`
+
+    to {
+        transform: translateX(0);
+    }
+`
+
+const bounceAvatar = keyframes`
+    50%{
+        transform: scale(0.6, 1.4)
+        translateX(50px)
+    }
+
+    0%, 100%{
+        transform: scale(1, 1)
+    }
+`
 
 const SectionOne = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background:blue;
-    height: ${ props => 100 - props.headerHeight }vh;
+    justify-content: center;
+    width: 100vw;
+    height: ${props => 100 - props.headerHeight}vh;
 `
 
 const SectionTwo = styled(SectionOne)`
@@ -17,10 +55,37 @@ const SectionTwo = styled(SectionOne)`
 const ImgAvatar = styled.img`
     width: 140px;
     border-radius: 50%;
+    margin: 4rem;
+    transform: translateX(-120vh);
+    animation: ${revealAvatar} .5s ease-in 5.2s forwards,
+        ${bounceAvatar} .5s ease-in-out 5.7s forwards;
 `
 
-const P = styled.p`
+const P1Container = styled.div`
+    width: 37.2rem;
+    font-size: 2rem;
+`
+
+const P2Container = styled.div`
+    width: 72.4rem;
+    font-size: 2rem;
+`
+
+const P1 = styled.p`
+    width: 0;
+    padding: 0.3em 0;
     margin: 20px auto;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid rgba(0,0,0,0);
+    animation: ${typeText} 2.5s steps(50, end) forwards,
+        ${blickCaret} 2.5s step-end;
+`
+
+const P2 = styled(P1)`
+    animation: ${typeText} 2.5s steps(50, end) forwards,
+        ${blickCaret} 2.5s step-end infinite;
+    animation-delay: 2.6s;
 `
 
 export default function Home(props) {
@@ -29,18 +94,22 @@ export default function Home(props) {
     return (
         <div>
             <SectionOne headerHeight={headerHeight} >
-                <P>
-                    Olá! Meu nome é Michael Rocha Nunes.
-                </P>
-                <P>
-                    Eu sou desenvolvedor front-end e estou em busca do meu primeiro emprego.
-                </P>
+                <P1Container>
+                    <P1>
+                        Olá! Meu nome é Michael Rocha Nunes.
+                    </P1>
+                </P1Container>
+                <P2Container>
+                    <P2>
+                        Eu sou desenvolvedor front-end e estou em busca do meu primeiro emprego.
+                    </P2>
+                </P2Container>
                 <ImgAvatar
                     src={michaelAvatar}
                     alt='Michael avatar'
                 />
             </SectionOne>
-                <Footer />
+            <Footer />
         </div>
     )
 }
