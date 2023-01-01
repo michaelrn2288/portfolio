@@ -77,7 +77,7 @@ const P1 = styled.p`
     margin: 20px auto;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 1px solid rgba(0,0,0,0);
+    border-right: 2px solid rgba(0,0,0,0);
     animation: ${typeText} 2.5s steps(50, end) forwards,
         ${blickCaret} 2.5s step-end;
 `
@@ -86,6 +86,11 @@ const P2 = styled(P1)`
     animation: ${typeText} 2.5s steps(50, end) forwards,
         ${blickCaret} 2.5s step-end infinite;
     animation-delay: 2.6s;
+`
+
+const ArrowDown = styled.div`
+    transform: rotate(270deg);
+    font-size: 5rem;
 `
 
 export default function Home(props) {
@@ -108,7 +113,14 @@ export default function Home(props) {
                     src={michaelAvatar}
                     alt='Michael avatar'
                 />
+                <a href='#section-two'>
+                    skills<br/>
+                    <ArrowDown>❬</ArrowDown>
+                </a>
             </SectionOne>
+            <SectionTwo id='section-two'>
+                cards will be here
+            </SectionTwo>
             <Footer />
         </div>
     )
