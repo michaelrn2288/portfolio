@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { hexToHSL } from "../../Utils/colorConverter"
+import { hexToHSL } from "../../Utils/colorTools"
 
 const ColorInput = styled.input`
     position: fixed;
