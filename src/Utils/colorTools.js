@@ -43,8 +43,8 @@ export function hexToHSL(hexColor) {
   return "hsl(" + h + "," + s + "%," + l + "%)";
 }
 
-export function hslColorAdjust(hslColor, hueAdjust, saturationAdjust, ligtnessAdjust) {
-  const hslArray = hslColor.split(',')
+export function hslColorAdjust(color, hueAdjust, saturationAdjust, ligtnessAdjust) {
+  const hslArray = color.split(',')
   let hslHue = Number(hslArray[0].replace('hsl(', ''))
   let hslSaturation = Number(hslArray[1].replace('%', ''))
   let hslLightness = Number(hslArray[2].replace('%)', ''))
@@ -64,4 +64,11 @@ export function hslColorAdjust(hslColor, hueAdjust, saturationAdjust, ligtnessAd
   const adjustedColor = `hsl(${hslHue},${hslSaturation}%,${hslLightness}%)`
 
   return adjustedColor
+}
+
+export function blackOrWhiteContrast(color, darkThreshold) {
+  const hslArray = color.split(',')
+  const hslLightness = Number(hslArray[2].replace('%)', ''))
+
+  return hslLightness <= darkThreshold ? 'white' : 'black'
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { hexToHSL, hslColorAdjust } from "../../Utils/colorTools";
+import { hexToHSL, hslColorAdjust, blackOrWhiteContrast } from "../../Utils/colorTools";
 import ColorSelector from "../ColorSelector";
 import Footer from "../Footer";
 import Header from "../Header";
@@ -20,7 +20,7 @@ const CustomColor = styled.div`
     left: 10%;
     height: 66px;
     width: 66px;
-    background-color: var(--color-inverted-light-3);
+    background-color: var(--black-white-contrast-on-light-1);
     border: solid black 7px;
 `
 
@@ -46,6 +46,20 @@ export default function App() {
     cssRoot.style.setProperty( '--color-inverted-dark-1', hslColorAdjust(selectedColor.hslcolor, 180, 1, 0.75) )
     cssRoot.style.setProperty( '--color-inverted-dark-2', hslColorAdjust(selectedColor.hslcolor, 180, 1, 0.5) )
     cssRoot.style.setProperty( '--color-inverted-dark-3', hslColorAdjust(selectedColor.hslcolor, 180, 1, 0.25) )
+    cssRoot.style.setProperty( '--black-white-contrast-on-light-1',
+        blackOrWhiteContrast(hslColorAdjust(selectedColor.hslcolor, 0, 1, 1), 40) )
+    cssRoot.style.setProperty( '--black-white-contrast-on-light-1.25',
+        blackOrWhiteContrast(hslColorAdjust(selectedColor.hslcolor, 0, 1, 1.25), 40) )
+    cssRoot.style.setProperty( '--black-white-contrast-on-light-1.5',
+        blackOrWhiteContrast(hslColorAdjust(selectedColor.hslcolor, 0, 1, 1.5), 40) )
+    cssRoot.style.setProperty( '--black-white-contrast-on-light-1.75',
+        blackOrWhiteContrast(hslColorAdjust(selectedColor.hslcolor, 0, 1, 1.75), 40) )
+    cssRoot.style.setProperty( '--black-white-contrast-on-light-0.75',
+        blackOrWhiteContrast(hslColorAdjust(selectedColor.hslcolor, 0, 1, 0.75), 40) )
+    cssRoot.style.setProperty( '--black-white-contrast-on-light-0.5',
+        blackOrWhiteContrast(hslColorAdjust(selectedColor.hslcolor, 0, 1, 0.5), 40) )
+    cssRoot.style.setProperty( '--black-white-contrast-on-light-0.25',
+        blackOrWhiteContrast(hslColorAdjust(selectedColor.hslcolor, 0, 1, 0.25), 40) )
 
     const headerHeight = '10'//vh
 
