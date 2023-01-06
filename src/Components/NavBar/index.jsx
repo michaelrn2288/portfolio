@@ -5,7 +5,7 @@ const StyledUl = styled.ul`
     display: flex;
     list-style: none;
     gap: 30px;
-    background-color: lightcyan;
+    color: var(--black-white-contrast);
 `
 
 export default function NavBar() {
