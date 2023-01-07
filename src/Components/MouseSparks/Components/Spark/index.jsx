@@ -8,7 +8,7 @@ const SparkAnimation = keyframes`
         opacity: 0.9;
     }
     to {
-        transform: translateY(150px);
+        transform: translateY(220px);
         opacity: 0;
     }
 `
@@ -18,6 +18,7 @@ const StyledSpark = styled.div`
     z-index: 99;
     width: 13px;
     height: 13px;
+    scale: 0.7 1.1;
     clip-path: polygon(50% 0, 64% 35%, 100% 50%, 64% 64%, 50% 100%, 35% 64%, 0 50%, 35% 35%);
     background-image: radial-gradient(circle,
         rgba(255,255,255,1) 0%,
@@ -26,7 +27,7 @@ const StyledSpark = styled.div`
         rgba(255,190,0, 1) 100%);
     left: ${props => props.initialPosition.x}px;
     top: ${props => props.initialPosition.y}px;
-    animation: ${SparkAnimation} 1s ease-in forwards;
+    animation: ${SparkAnimation} 1.1s ease-in forwards;
 
 `
 
