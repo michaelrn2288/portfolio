@@ -8,7 +8,7 @@ const SparkAnimation = keyframes`
         opacity: 0.9;
     }
     to {
-        transform: translateY(220px);
+        transform: translateY(150px);
         opacity: 0;
     }
 `
@@ -26,7 +26,7 @@ const StyledSpark = styled.div`
         rgba(255,190,0, 1) 100%);
     left: ${props => props.initialPosition.x}px;
     top: ${props => props.initialPosition.y}px;
-    animation: ${SparkAnimation} 1.1s ease-in forwards;
+    animation: ${SparkAnimation} 1s ease-in forwards;
 
 `
 

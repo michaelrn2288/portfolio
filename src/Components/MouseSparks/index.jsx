@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Spark from './Components/Spark'
 
-
 const StyledSparks = styled.div`
     position: absolute;
   `
@@ -15,10 +14,11 @@ export default function MouseSparks(props) {
   const [mouseMoved, setMouseMoved] = useState(false)
   const [mouseOutOfWindow, setMouseOutOfWindow] = useState(false)
   const [sparks, setSparks] = useState(createSparksArray())
+  const [iterator, setIterator] = useState(0)
 
   function createSparksArray() {
     let sparksArray = []
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 20; i++) {
       sparksArray.push({ id: i, exists: false })
     }
     return sparksArray
@@ -69,34 +69,33 @@ export default function MouseSparks(props) {
 
   useEffect(() => {
 
-    function createSpark(id) {
+    const sparksEffect = setTimeout(() => {
+      createSpark()
+      removeSpark()
+      setIterator(prevState => prevState + 1 > 20 ? 0 : prevState + 1)
+    }
+      , 50)
+
+    function createSpark() {
       setSparks(prevState => {
-        return prevState.map(spark => spark.id !== id ? spark : {
+        return prevState.map(spark => spark.id !== iterator ? spark : {
           ...spark,
           exists: true
         })
       })
     }
 
-    function removeSpark(id) {
+    function removeSpark() {
       setSparks(prevState => {
-        return prevState.map(spark => spark.id !== id ? spark : {
+        return prevState.map(spark => spark.id !== (
+          iterator + 10 > 20 ? iterator + 10 - 20 : iterator + 10
+          ) ? spark : {
           ...spark,
           exists: false
         })
       })
     }
-
-    sparks.forEach((element, index) => {
-      setInterval(() => {
-        createSpark(index)
-      }, 100 * (index + 1))
-      setInterval(() => {
-        removeSpark(index)
-      }, 100 * (index + 1) + 200)
-    })
-
-  }, [])
+  }, [iterator])
 
   return (
 
