@@ -69,14 +69,13 @@ export default function ColorSelector(props) {
         setArrowPosition(prevState => {
             return prevState === '0' ? '180deg' : '0'
         })
-        console.log(arrowPosition)
     }
 
     function handleChange(event) {
         const { name, value } = event.target
         props.setSelectedColor(prevColor => ({
-            [name]: value,
-            hslcolor: hexToHSL(value)
+            hexcolor: value,
+            [name]: hexToHSL(value),
         }))
     }
 
@@ -89,7 +88,7 @@ export default function ColorSelector(props) {
                 <P>Alterar esquema de cores</P>
                 <ColorInput
                     type='color'
-                    name='hexcolor'
+                    name='hslcolor'
                     value={props.selectedColor.hexcolor}
                     onChange={handleChange}
                 />

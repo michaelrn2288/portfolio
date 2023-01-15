@@ -7,8 +7,16 @@ const StyledHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
-    color: var(--black-white-contrast-on-light-2);
-    background-color: var(--color-main-light-2);
+    color: hsla(
+        var(--hue-contrast),
+        var(--saturation-100),
+        var(--light-inverted-050),
+        1);
+    background-color: hsla(
+        var(--hue-secondary2),
+        var(--saturation-100),
+        var(--light-150),
+        1);
 `
 
 const FirstSection = styled.section`
