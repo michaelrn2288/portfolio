@@ -27,15 +27,17 @@ const StyledMain = styled.main`
     background-color: hsla(
         var(--hue-primary),
         var(--saturation-100),
-        var(--light-150),
+        var(--light-100),
         1);
 `
+
+const initialColor = '#94a0ff'
 
 export default function App() {
     const [areSparksOn, setAreSparksOn] = useState(true)
     const [selectedColor, setSelectedColor] = useState({
-        hexcolor: '#0012ff',
-        hslcolor: hexToHSL('#0012ff')
+        hexcolor: initialColor,
+        hslcolor: hexToHSL(initialColor)
     })
 
     setCssVars(selectedColor.hslcolor)

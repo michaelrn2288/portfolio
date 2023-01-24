@@ -39,22 +39,25 @@ const StyledButton = styled.button`
     font-size: 1.1rem;
     font-weight: 600;
     width: 11rem;
-    color: var(--black-white-contrast-on-light-1);
-    background-color: var(--color-inverted-light-2);
+    color: black;
+    background-color: hsla(var(--hue-contrast), 100%, 50%, 0.65);
     transition: 0.4s;
 
     &:hover{
-        background-color: var(--color-inverted);
+        background-color: hsla(var(--hue-contrast), 100%, 50%, 1);
     }
 
     &:active{
-        background-color: var(--color-inverted-dark-1);
+        background-color: hsla(var(--hue-contrast), 100%, 75%, 1);
     }
 `
 
 const SlideController = styled.div`
     font-size: 3rem;
     cursor: pointer;
+    letter-spacing: -0.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     transform: scaleX(1.5) rotateY(${props => props.arrowPosition});
 `
 

@@ -36,6 +36,9 @@ const MainContainer = styled.div`
 const SlideController = styled.div`
     font-size: 3rem;
     cursor: pointer;
+    letter-spacing: -0.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     transform: scaleX(1.5) rotateY(${props => props.arrowPosition});
 `
 
