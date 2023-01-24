@@ -1,6 +1,6 @@
 import { useState } from "react"
 import styled, { keyframes } from "styled-components"
-import { hexToHSL } from "../../Utils/colorTools"
+import { hexToHSL, blackOrWhiteContrast } from "../../Utils/colorTools"
 
 const hiddenColorSelectorSpot = '-220px'
 
@@ -39,6 +39,7 @@ const SlideController = styled.div`
     letter-spacing: -0.4rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    color: ${ props => blackOrWhiteContrast(props.selectedColor.hslcolor, 35) };
     transform: scaleX(1.5) rotateY(${props => props.arrowPosition});
 `
 
@@ -99,6 +100,7 @@ export default function ColorSelector(props) {
             <SlideController
                 onClick={toggleRevealComponent}
                 arrowPosition={arrowPosition}
+                selectedColor={props.selectedColor}
             >
             ❬❬
             </SlideController>

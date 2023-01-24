@@ -55,6 +55,7 @@ export default function App() {
                 toggleState={setAreSparksOn}
                 textWhenOn={'desligar faíscas'}
                 textWhenOff={'ligar faíscas'}
+                selectedColor={selectedColor}
             />
             <ColorSelector
                 selectedColor={selectedColor}
