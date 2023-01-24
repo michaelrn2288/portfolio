@@ -55,7 +55,12 @@ const SecondaryContainer = styled.div`
 `
 
 const P = styled.p`
-    
+font-weight: 800;
+    color: hsla(
+        var(--hue-secondary1),
+        var(--saturation-100),
+        var(--light-inverted-050),
+        1);
 `
 
 const ColorInput = styled.input`
