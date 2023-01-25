@@ -31,7 +31,7 @@ const StyledMain = styled.main`
         1);
 `
 
-const initialColor = '#94a0ff'
+const initialColor = '#000233'
 
 export default function App() {
     const [areSparksOn, setAreSparksOn] = useState(true)
