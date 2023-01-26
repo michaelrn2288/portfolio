@@ -21,13 +21,13 @@ const StyledMain = styled.main`
     justify-content: center;
     color: hsla(
         var(--hue-secondary1),
-        var(--saturation-100),
-        var(--light-inverted-050),
+        var(--saturation-default),
+        var(--light-inverted-m30),
         1);
     background-color: hsla(
         var(--hue-primary),
-        var(--saturation-100),
-        var(--light-100),
+        var(--saturation-default),
+        var(--light-default),
         1);
 `
 

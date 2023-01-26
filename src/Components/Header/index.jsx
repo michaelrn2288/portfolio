@@ -9,13 +9,13 @@ const StyledHeader = styled.header`
     padding: 0 40px;
     color: hsla(
         var(--hue-contrast),
-        var(--saturation-100),
-        var(--light-inverted-050),
+        var(--saturation-default),
+        var(--light-inverted-m30),
         1);
     background-color: hsla(
         var(--hue-secondary2),
-        var(--saturation-100),
-        var(--light-150),
+        var(--saturation-default),
+        var(--light-p30),
         1);
 `
 

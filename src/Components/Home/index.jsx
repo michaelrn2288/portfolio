@@ -57,7 +57,7 @@ const ImgAvatar = styled.img`
     border-radius: 50%;
     margin: 4rem;
     transform: translateX(-100vw);
-    background-color: hsl(var(--hue-secondary1), var(--saturation-100), var(--light-inverted-075));
+    background-color: hsl(var(--hue-secondary1), var(--saturation-default), var(--light-inverted-m15));
     animation: ${revealAvatar} .5s ease-in 5.2s forwards,
         ${bounceAvatar} .5s ease-in-out 5.7s forwards;
 `

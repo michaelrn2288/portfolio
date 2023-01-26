@@ -58,8 +58,8 @@ const P = styled.p`
 font-weight: 800;
     color: hsla(
         var(--hue-secondary1),
-        var(--saturation-100),
-        var(--light-inverted-050),
+        var(--saturation-default),
+        var(--light-inverted-m30),
         1);
 `
 
