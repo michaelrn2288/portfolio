@@ -16,9 +16,7 @@ import MouseSparks from "../MouseSparks";
 import Router from "../Router";
 import ToggleButton from "../ToggleButton";
 
-const StyledMain = styled.main`
-    display: flex;
-    justify-content: center;
+const PageWrapper = styled.div`
     color: hsla(
         var(--hue-secondary1),
         var(--saturation-default),
@@ -29,6 +27,11 @@ const StyledMain = styled.main`
         var(--saturation-default),
         var(--light-default),
         1);
+`
+
+const StyledMain = styled.main`
+    display: flex;
+    justify-content: center;
 `
 
 const initialColor = '#000233'
@@ -45,7 +48,7 @@ export default function App() {
     const headerHeight = '13'//vh
 
     return (
-        <div>
+        <PageWrapper>
             <Header headerHeight={headerHeight} />
             <MouseSparks
                 areSparksOn={areSparksOn}
@@ -64,6 +67,6 @@ export default function App() {
             <StyledMain >
                 <Router headerHeight={headerHeight} />
             </StyledMain>
-        </div>
+        </PageWrapper>
     )
 }

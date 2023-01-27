@@ -10,11 +10,6 @@ html {
     font-size: 16px;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-color: hsla(
-        var(--hue-primary),
-        var(--saturation-default),
-        var(--light-default),
-        1);
 }
 
 a {
