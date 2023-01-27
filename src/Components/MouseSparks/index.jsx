@@ -7,6 +7,9 @@ const StyledSparks = styled.div`
   `
 
 export default function MouseSparks(props) {
+
+  const numberOfSparks = 26
+
   const [mousePosition, setMousePosition] = useState({
     x: '',
     y: ''
@@ -18,7 +21,7 @@ export default function MouseSparks(props) {
 
   function createSparksArray() {
     let sparksArray = []
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < numberOfSparks; i++) {
       sparksArray.push({ id: i, exists: false })
     }
     return sparksArray
@@ -72,9 +75,9 @@ export default function MouseSparks(props) {
     const sparksEffect = setTimeout(() => {
       createSpark()
       removeSpark()
-      setIterator(prevState => prevState + 1 > 20 ? 0 : prevState + 1)
+      setIterator(prevState => prevState + 1 > numberOfSparks ? 0 : prevState + 1)
     }
-      , 50)
+      , 85)
 
     function createSpark() {
       setSparks(prevState => {
@@ -88,7 +91,9 @@ export default function MouseSparks(props) {
     function removeSpark() {
       setSparks(prevState => {
         return prevState.map(spark => spark.id !== (
-          iterator + 10 > 20 ? iterator + 10 - 20 : iterator + 10
+          iterator + parseInt(numberOfSparks/2) > numberOfSparks ?
+          iterator + parseInt(numberOfSparks/2) - numberOfSparks
+          : iterator + parseInt(numberOfSparks/2)
           ) ? spark : {
           ...spark,
           exists: false

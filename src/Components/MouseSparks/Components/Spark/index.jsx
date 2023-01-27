@@ -4,12 +4,13 @@ import { randomNumber } from '../../../../Utils/random'
 
 const SparkAnimation = keyframes`
     from{
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
         opacity: 0.9;
     }
     to {
-        transform: translateY(220px);
+        transform: translateY(220px) scale(0);
         opacity: 0;
+        
     }
 `
 
@@ -27,7 +28,7 @@ const StyledSpark = styled.div`
         rgba(255,190,0, 1) 100%);
     left: ${props => props.initialPosition.x}px;
     top: ${props => props.initialPosition.y}px;
-    animation: ${SparkAnimation} 1.1s ease-in forwards;
+    animation: ${SparkAnimation} 1.6s ease-in forwards;
 
 `
 
@@ -41,7 +42,7 @@ export default function Spark(props) {
     useEffect(() => {
         setInitialPosition({
             x: props.mousePositionX + randomNumber(-15, 15),
-            y: props.mousePositionY + randomNumber(20, 30)
+            y: props.mousePositionY + randomNumber(17, 33)
         })
     }, [])
 
