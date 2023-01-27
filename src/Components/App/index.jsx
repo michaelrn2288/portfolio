@@ -13,21 +13,11 @@ import ColorSelector from "../ColorSelector";
 import Footer from "../Footer";
 import Header from "../Header";
 import MouseSparks from "../MouseSparks";
+import PageWrapper from "../PageWrapper";
 import Router from "../Router";
 import ToggleButton from "../ToggleButton";
 
-const PageWrapper = styled.div`
-    color: hsla(
-        var(--hue-secondary1),
-        var(--saturation-default),
-        var(--light-inverted-m30),
-        1);
-    background-color: hsla(
-        var(--hue-primary),
-        var(--saturation-default),
-        var(--light-default),
-        1);
-`
+
 
 const StyledMain = styled.main`
     display: flex;
