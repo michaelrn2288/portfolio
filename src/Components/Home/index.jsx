@@ -1,6 +1,8 @@
 import styled, { keyframes } from 'styled-components'
 import michaelAvatar from '../../assets/eu.png'
+import {skills} from '../../skills'
 import Footer from '../Footer'
+import SkillCard from '../SkillCard'
 
 const typeText = keyframes`
     from{
@@ -49,7 +51,12 @@ const SectionOne = styled.section`
 `
 
 const SectionTwo = styled(SectionOne)`
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 50px;
 `
 
 const ImgAvatar = styled.img`
@@ -96,6 +103,15 @@ const ArrowDown = styled.div`
 
 export default function Home(props) {
     const { headerHeight } = props
+    console.log(skills)
+    const skillCards = skills.map( (skill, index) => {
+        return (
+            <SkillCard
+            index={index}
+            key={index}
+        />
+        )
+    })
 
     return (
         <div>
@@ -120,7 +136,7 @@ export default function Home(props) {
                 </a>
             </SectionOne>
             <SectionTwo id='section-two'>
-                cards will be here
+                {skillCards}
             </SectionTwo>
             <Footer />
         </div>
