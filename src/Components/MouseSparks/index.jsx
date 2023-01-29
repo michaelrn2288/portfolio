@@ -105,11 +105,7 @@ export default function MouseSparks(props) {
   return (
 
     <div>
-      {
-        props.areSparksOn ?
-          mouseMoved && !mouseOutOfWindow && sparkElements
-          : null
-      }
+      {mouseMoved && !mouseOutOfWindow && sparkElements}
     </div>
   )
 }

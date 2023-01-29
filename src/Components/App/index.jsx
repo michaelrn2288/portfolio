@@ -40,9 +40,7 @@ export default function App() {
     return (
         <PageWrapper>
             <Header headerHeight={headerHeight} />
-            <MouseSparks
-                areSparksOn={areSparksOn}
-            />
+            {areSparksOn && <MouseSparks />}
             <ToggleButton
                 isSwitchOn={areSparksOn}
                 toggleState={setAreSparksOn}
