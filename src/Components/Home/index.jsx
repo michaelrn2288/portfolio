@@ -54,9 +54,11 @@ const SectionTwo = styled(SectionOne)`
     min-height: 100vh;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 30px;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 30px;
 `
 
 const ImgAvatar = styled.img`
@@ -103,7 +105,6 @@ const ArrowDown = styled.div`
 
 export default function Home(props) {
     const { headerHeight } = props
-    console.log(skills)
     const skillCards = skills.map( (skill, index) => {
         return (
             <SkillCard
