@@ -55,6 +55,7 @@ export default function App() {
             <StyledMain >
                 <Router headerHeight={headerHeight} />
             </StyledMain>
+            <Footer />
         </PageWrapper>
     )
 }

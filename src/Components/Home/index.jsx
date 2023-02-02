@@ -139,7 +139,6 @@ export default function Home(props) {
             <SectionTwo id='section-two'>
                 {skillCards}
             </SectionTwo>
-            <Footer />
         </div>
     )
 }
