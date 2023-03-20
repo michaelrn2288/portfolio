@@ -1,5 +1,4 @@
 import { projects } from "../../projects";
-import Footer from "../Footer";
 import ProjectCard from "../ProjectCard";
 
 export default function Projects() {
