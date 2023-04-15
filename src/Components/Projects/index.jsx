@@ -1,5 +1,12 @@
+import styled from "styled-components";
 import { projects } from "../../projects";
 import ProjectCard from "../ProjectCard";
+
+const ProjectsContainer = styled.div`
+display: flex;
+flex-direction: column;
+gap: 20px;
+`
 
 export default function Projects() {
 
@@ -18,9 +25,9 @@ export default function Projects() {
 
     return (
         <>
-            <div>
+            <ProjectsContainer>
                 {projectCards}
-            </div>
+            </ProjectsContainer>
         </>
     )
 }
