@@ -7,6 +7,8 @@ const StyledHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
+    position: fixed;
+    width: 100%;
     color: hsla(
         var(--hue-contrast),
         var(--saturation-default),
