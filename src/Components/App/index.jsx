@@ -18,10 +18,13 @@ import Router from "../Router";
 import ToggleButton from "../ToggleButton";
 
 
+const headerHeight = '13'//vh
 
 const StyledMain = styled.main`
     display: flex;
     justify-content: center;
+    position: relative;
+    padding-top: ${headerHeight}vh;
 `
 
 const initialColor = '#000233'
@@ -34,8 +37,6 @@ export default function App() {
     })
 
     setCssVars(selectedColor.hslcolor)
-
-    const headerHeight = '13'//vh
 
     return (
         <PageWrapper>

@@ -9,6 +9,7 @@ const StyledHeader = styled.header`
     padding: 0 40px;
     position: fixed;
     width: 100%;
+    z-index: 2;
     color: hsla(
         var(--hue-contrast),
         var(--saturation-default),
