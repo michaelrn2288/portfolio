@@ -10,18 +10,6 @@ const ContactsContainer = styled.div`
     padding: 22px;
 `
 
-const ImgCaptionPair = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    font-size: 1.4rem;
-`
-
-const ContactImg = styled.img`
-    border-radius: 50%;
-    width: 100px;
-`
-
 export default function Contact() {
 
     const contactCards = contacts.map( (contact, index) => {

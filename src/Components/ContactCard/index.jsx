@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { contacts } from "../../contacts";
 
 const StyledDiv = styled.div`
     display: flex;
