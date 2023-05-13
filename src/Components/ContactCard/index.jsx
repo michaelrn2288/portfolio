@@ -5,11 +5,17 @@ const StyledDiv = styled.div`
     align-items: center;
     gap: 11px;
     font-size: 1.4rem;
+    height: 130px;
+    width: 500px;
 `
 
 const Img = styled.img`
     border-radius: 50%;
-    width: 100px;
+    width: 90px;
+    transition: 0.15s;
+    &:hover {
+        width: 105px;
+    }
 `
 
 export default function ContactCard(props) {
