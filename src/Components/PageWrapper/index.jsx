@@ -11,6 +11,10 @@ const StyledDiv = styled.div`
         var(--saturation-default),
         var(--light-default),
         1);
+
+        @media (max-width: 480px) {
+            font-size: 0.8rem;
+        }
 `
 
 export default function PageWrapper(props) {
