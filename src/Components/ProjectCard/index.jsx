@@ -4,7 +4,8 @@ import { projects } from "../../projects";
 const Card = styled.div`
 display: flex;
 flex-direction: column;
-width: 700px;
+align-items: center;
+width: 80vw;
 background-color: rgba(0,0,0,0.5);
 padding: 28px;
 margin: 14px;
@@ -18,6 +19,7 @@ font-size: 1.6rem;
 
 const Img = styled.img`
 padding: 10px;
+width: 60vw;
 `
 
 const P = styled.p`
